@@ -61,8 +61,8 @@ def H(p,q,r,s,b):
    A0=A(b)
    H0=A0
    C=[np.exp(j*p),np.exp(j*q),np.exp(j*r),np.exp(j*s),np.exp(j*(-p+q-r+s))]
-   for i in range(1,2*g+1):
-      I,J=3*(i-1)+2-1,3*(i+(2*g-1))+2-1
+   for i in range(1,int(m/2)+1):
+      I,J=3*(i-1)+2-1,3*(i+(2*g))+2-1
       H0[I][J]+=-C[i-1]*d
       H0[J][I]+=np.conjugate(C[i-1])*d
 
